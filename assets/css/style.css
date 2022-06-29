@@ -51,8 +51,8 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #1a1814;
-  border-top-color: #5e59ff;
-  border-bottom-color: #5e59ff;
+  border-top-color: var(--theme-color-1);
+  border-bottom-color: var(--theme-color-1);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -352,6 +352,7 @@ h6 {
   background: rgba(0, 0, 0, 0.9);
   transition: 0.3s;
   z-index: 999;
+  /* height: 84vh; */
 }
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
