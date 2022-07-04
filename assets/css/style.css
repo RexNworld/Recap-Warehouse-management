@@ -188,8 +188,14 @@ h6 {
 #header .logo a {
   color: #fff;
 }
+
+#footer .logo img {
+  width: 50%;
+  margin-bottom: 20px;
+}
 #header .logo img {
-  max-height: 40px;
+  /* max-height: 40px; */
+  width: 50%;
 }
 
 /*--------------------------------------------------------------

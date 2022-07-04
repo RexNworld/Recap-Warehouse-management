@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+:root {
+  --theme-color-1: #5e59ff;
+  --theme-color-2: #4b47de;
+  --theme-color-3: #3e3abd;
+  --theme-color-4: #302d98;
+  --theme-color-5: #24227a;
+  --theme-color-6: #171551;
+  --theme-color-6: #121132;
+}
+body::-webkit-scrollbar {
+  width: 4px;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--theme-color-5);
+  border-radius: 12px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-color-1);
+}
+.gradient {
+  background: var(--theme-color-6);
+  color: #fff;
+}
+.image-container {
+  position: relative;
+  padding: 0px;
+}
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #5e59ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d9ba85;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', serif;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    width: 100%;
+  }
+  .sidebar {
+    width: 20% !important;
+  }
+  .sidebar .nav-item {
+    padding: 0 1rem 0 1rem;
+  }
+  .sidebar .nav-item .nav-link {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .sidebar .nav-item .nav-link {
+    font-size: 15px;
+    width: 100%;
+    color: #fff;
+  }
+
+  .sidebar .nav-item .nav-link i {
+    font-size: 1.4rem;
+    margin-right: 0.25rem;
+  }
+}
+.sidebar .nav-item .nav-link {
+  color: #fff;
+}
+.sidebar .nav-item .nav-link:hover {
+  color: var(--theme-color-1);
+}
+.sidebar .nav-item .nav-link.active {
+  font-weight: 700;
+  background-color: var(--theme-color-1);
+  box-shadow: 0px 2px 25px rgba(94, 89, 255, 0.25);
+  color: #fff;
+}
+.custom-card img {
+  height: 220px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+.custom-card .card-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #121132;
+}
+.custom-card .card-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.custom-card-notify .card-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #121132;
+}
+.custom-card-notify .card-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+.card-recap {
+  height: 80vh;
+  background-color: transparent;
+  border: 0;
+}
+.card-recap .card-body .diagram {
+  background: radial-gradient(57.17% 56.93% at 50.21% 50%, #0091d6 0%, #004e7c 100%);
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+  z-index: 0;
+}
+.card-recap .card-body .diagram .top-btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.card-recap .card-body .diagram .bottom-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: grid;
+}
+.card-recap .card-body .diagram .bottom-btn button {
+  background-color: transparent;
+}
+.bg-theme {
+  background-color: var(--theme-color-1) !important;
+}
+.bg-theme:hover,
+.bg-theme:focus {
+  background-color: var(--theme-color-1) !important;
+}
+.btn-theme {
+  color: #fff;
+  background-color: var(--theme-color-1);
+  border-color: var(--theme-color-1);
+}
+.btn-theme-2 {
+  background: rgba(94, 89, 255, 0.1);
+  border-radius: 46px;
+  color: var(--theme-color-1);
+}
+.btn-theme-2:hover {
+  color: #fff;
+}
+.btn:hover {
+  color: var(--theme-color-6);
+}
+.card-recap .card-body .inner-diagram {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  overflow: scroll;
+  overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: -o-grab;
+  cursor: grab;
+}
+.card-recap .card-body .inner-diagram img {
+  width: 1693px;
+  height: 981px;
+}
+#editProfile .img-holder {
+  text-align: center;
+}
+#editProfile .img-avtar {
+  width: 170px;
+  height: 170px;
+  margin: auto;
+}
+@media screen and (max-width: 400px) {
+  #editProfile .img-avtar {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  #editProfile .border-end {
+    border: none !important;
+  }
+}
+@media screen and (max-width: 750px) {
+  #editProfile .border-end {
+    border: none !important;
+  }
+}
+#editProfile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+#editProfile label {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+#editProfile form input::placeholder {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+#editProfile h3 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+}
+.bg-none {
+  background: none !important;
+}
+/* .table tbody tr:last-child {
+  border-bottom: hidden;
+} */

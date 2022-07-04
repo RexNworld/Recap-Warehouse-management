@@ -986,7 +986,8 @@ section:nth-child(odd) {
   color: #fff;
 }
 #heroAuth .logo img {
-  max-height: 40px;
+  width: 50%;
+  margin-bottom: 20px;
 }
 #heroForm form * {
   font-family: 'Poppins', sans-serif;
