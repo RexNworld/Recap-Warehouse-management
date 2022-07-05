@@ -89,6 +89,9 @@ h6 {
     display: flex;
     align-items: center;
   }
+  .sidebar .nav-item span {
+    font-size: 15px;
+  }
   .sidebar .nav-item .nav-link {
     font-size: 15px;
     width: 100%;
@@ -243,11 +246,11 @@ h6 {
   border-radius: 50%;
 }
 #editProfile label {
-  font-family: 'Public Sans';
   font-style: normal;
-  font-weight: 700;
   font-size: 16px;
   line-height: 19px;
+  font-family: 'Roboto';
+  font-weight: 500;
 }
 
 #editProfile form input::placeholder {
@@ -276,4 +279,330 @@ h6 {
 }
 .btn-dropdown-theme:after {
   display: none;
+}
+/*--------------------------------------------------------------
+# Message
+--------------------------------------------------------------*/
+.message .custom-height {
+  height: 800px;
+}
+.message input,
+.message input:focus,
+.message input:hover {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #f8f9fc inset !important;
+  background-color: transparent !important;
+}
+.btn-outline-none:focus,
+.btn-outline-none:hover,
+.btn-outline-none {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.message .message-user-list {
+  height: 85%;
+}
+.message-parent {
+  position: relative;
+  height: 100%;
+}
+.message .list-group {
+  position: absolute;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* height: 100%; */
+  overflow: scroll;
+  width: 100%;
+  border-radius: 0;
+}
+.message .list-group::-webkit-scrollbar {
+  width: 0px;
+}
+.message .list-group::-webkit-scrollbar-thumb {
+  background: var(--theme-color-5);
+  border-radius: 12px;
+}
+.message .list-group::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-color-1);
+}
+.message .list-group .active {
+  background: #f8f8ff;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08);
+  border: none;
+}
+.message .list-group .list-group-item {
+  border: none;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+}
+.profile-img {
+  border: 2px solid #ffffff;
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.16));
+  border-radius: 50%;
+  position: relative;
+}
+.profile-img .status {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 1000%;
+  bottom: 0;
+  right: 2px;
+}
+.profile-img .online {
+  background-color: #06dc0f;
+  border: 1.5px solid #ffffff;
+}
+.profile-img .offline {
+  background-color: #aaa;
+  border: 1.5px solid #ffffff;
+}
+
+.profile-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.profile-info .user-name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  color: #121132;
+}
+.profile-info .user-massege {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  color: #8d8da8;
+}
+.profile-stats .user-brand,
+.profile-stats .user-location,
+.profile-stats .user-survey-date {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #121132;
+}
+.message .message-preview-header {
+  background: #fcfcfc;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08);
+}
+.message-preview-header .profile-stats i {
+  font-size: 30px;
+}
+/* user-name */
+/* user-massege  */
+.message-preview-header .user-name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #121132;
+}
+.message-preview-header .user-massege {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #8f919b;
+}
+.message-preview {
+  position: relative;
+  height: 100%;
+}
+.message-preview .massege-preview-body {
+  position: absolute;
+  bottom: 100px;
+  top: 100px;
+  overflow: scroll;
+  overflow-x: hidden;
+
+  width: 100%;
+}
+
+.message-preview .massege-reply {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fcfcfc;
+  box-shadow: 0px -2px 20px rgba(0, 0, 0, 0.05), 0px 1px 0px rgba(0, 0, 0, 0.08);
+}
+.massege-preview-body .user-name span {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #8f919b;
+}
+.massege-preview-body .user-name span {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #8f919b;
+}
+.massege-preview-body .user-massege {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+
+  letter-spacing: 0.04em;
+
+  color: #121132;
+}
+.massege-preview-body .user-massege {
+  max-width: 70%;
+}
+
+.massege-preview-body .user-massege {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* ------------------
+    Calender
+------------------ */
+.calender .calender-navigation,
+.calender .calender-navigation i {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 110%;
+  /* identical to box height, or 53px */
+}
+.calender .calender-navigation span {
+  font-weight: 700;
+}
+.calender .calender-main {
+  border: 2px solid #d6d9da;
+}
+.calender .calender-main .calender-header span {
+  background-color: #aaa;
+  width: 170px;
+  background: #f5f5f6;
+  box-shadow: inset 0px 1px 0px rgba(51, 63, 72, 0.2), inset -1px 0px 0px rgba(51, 63, 72, 0.2);
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+  /* or 22px */
+  padding-left: 0.2rem;
+  color: #121132;
+
+  opacity: 0.77;
+}
+.calender .calender-main .calender-body .calender-content {
+  width: 14.2857143%;
+  height: 90px;
+  background: #ffffff;
+  box-shadow: inset 0px 1px 0px rgba(51, 63, 72, 0.2), inset -1px 0px 0px rgba(51, 63, 72, 0.2);
+}
+.calender .calender-body .date {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+  /* or 22px */
+  color: #121132;
+
+  width: 100%;
+  float: right;
+  text-align: right;
+}
+.calender .calender-body .prev {
+  color: #adb2b6;
+}
+.calender .calender-body .next {
+  color: #adb2b6;
+}
+.calender .calender-body .notes {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* or 167% */
+  letter-spacing: 0.02em;
+  width: 100%;
+  max-width: 100%;
+  color: #121132;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-align: center;
+}
+.calender .calender-body .notes span {
+  font-weight: 600;
+}
+.followUp {
+  background: rgba(94, 89, 255, 0.05) !important;
+}
+label {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.custom-input,
+.custom-input:focus,
+.custom-input:hover {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+.custom-input:-webkit-autofill,
+.custom-input:-webkit-autofill:hover,
+.custom-input:-webkit-autofill:focus,
+.custom-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #f8f9fc inset !important;
+  background-color: transparent !important;
+}
+option {
+  background-color: #fff;
 }

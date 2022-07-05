@@ -194,10 +194,19 @@ h6 {
   margin-bottom: 20px;
 }
 #header .logo img {
-  /* max-height: 40px; */
-  width: 50%;
+  width: 339.9px;
+  height: 110px;
 }
-
+#header.header-scrolled .logo img {
+  width: 50%;
+  height: auto;
+}
+@media screen and (max-width: 990px) {
+  #header .logo img {
+    width: 150px;
+    height: auto;
+  }
+}
 /*--------------------------------------------------------------
 # Book a table button Menu
 --------------------------------------------------------------*/
