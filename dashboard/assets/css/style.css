@@ -271,3 +271,9 @@ h6 {
 /* .table tbody tr:last-child {
   border-bottom: hidden;
 } */
+.btn-dropdown-theme {
+  outline: none;
+}
+.btn-dropdown-theme:after {
+  display: none;
+}
