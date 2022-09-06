@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Dashboard</title>
+    <link rel="icon" type="image/jpeg" sizes="1500x1500" href="assets/img/banner/logo.png" />
+    <link rel="icon" type="image/jpeg" sizes="1500x1500" href="assets/img/banner/logo.png" />
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" /> -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <link href="assets/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <div id="wrapper">
+      <nav
+        class="navbar navbar-light align-items-start sidebar sidebar-white text-dark accordion p-0 gradient"
+      >
+        <div class="container-fluid d-flex flex-column p-0">
+          <a
+            class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0 px-4"
+            href="#"
+            style="height: 100%; width: 100%"
+          >
+            <div class="sidebar-brand-icon">
+              <img src="assets/img/icons/recap-icon.svg" alt="" class="w-100" />
+            </div>
+          </a>
+          <hr class="sidebar-divider my-0" />
+          <ul class="navbar-nav text-light" id="accordionSidebar">
+            <li class="nav-item align-items-center">
+              <a class="nav-link" href="index.html"
+                ><i class="bx bxs-home"></i><span>Dashboard</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="notifications.html"
+                ><i class="bx bxs-bell"></i><span>Notifications</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="message.html"
+                ><i class="bx bxs-message-rounded-dots"></i><span>Message</span></a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="editProfile.html"
+                ><i class="bx bxs-user-circle"></i><span>Edit Profile</span></a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="startNewRecap.html"
+                ><i class="bx bxs-news"></i><span>Start New Recap</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="recapHistory.html"
+                ><i class="fa fa-history" aria-hidden="true"></i> <span>Recap History</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="followUp.html"
+                ><i class="fa fa-hashtag" aria-hidden="true"></i><span>Follow-Up</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="recapHiring.html">
+                <img src="assets/img/icons/recap-hire.svg" class="me-2" alt="" />
+                <span>Hire For Recap</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <div class="my-2 align-items-center">
+                <div class="form- form-switch ps-3">
+                  <label class="form-check-label" for="flexSwitchCheckChecked"
+                    ><i class="bx bxs-alarm"></i><span> Notification Settings</span></label
+                  >
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="flexSwitchCheckChecked"
+                    style="float: right"
+                    checked
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactUs.html"
+                ><i class="bx bxs-phone"></i><span>Contact us</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feedback.html"
+                ><i class="bx bxs-message-alt-error"></i><span>Feedback</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img src="assets/img/icons/whatsapp.svg" class="me-2" /><span
+                  >Connect to WhatsApp</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img src="assets/img/icons/slack.svg" class="me-2" /><span
+                  >Connect to Slack</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Logout.html"
+                ><i class="bx bxs-log-out"></i><span>Log out</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+          <nav
+            class="navbar navbar-light navbar-expand bg-light border-bottom mb-4 topbar static-top"
+          >
+            <div class="container-fluid">
+              <button
+                class="btn btn-link d-md-none rounded-circle me-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+              <h4 class="text-dark fw-bold m-0">Start New Recap</h4>
+
+              <ul class="navbar-nav flex-nowrap ms-auto" style="width: auto">
+                <li class="nav-item dropdown no-arrow">
+                  <a
+                    class="dropdown-toggle nav-link"
+                    aria-expanded="false"
+                    data-bs-toggle="dropdown"
+                    href="#"
+                    ><i class="fas fa-search"></i
+                  ></a>
+                  <div
+                    class="dropdown-menu dropdown-menu-end p-3 animated--grow-in"
+                    aria-labelledby="searchDropdown"
+                  >
+                    <form class="me-auto navbar-search w-100">
+                      <div class="input-group">
+                        <input
+                          class="bg-light form-control border-0 small"
+                          type="text"
+                          placeholder="Search for ..."
+                        />
+                        <div class="input-group-append">
+                          <button class="btn btn-primary py-0" type="button">
+                            <i class="fas fa-search"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </li>
+                <li class="nav-item dropdown no-arrow mx-1">
+                  <div class="nav-item dropdown no-arrow">
+                    <a
+                      class="dropdown-toggle nav-link"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                      href="#"
+                      ><span class="badge bg-danger badge-counter">3+</span
+                      ><i class="fas fa-bell fa-fw"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                      <h6 class="dropdown-header">alerts center</h6>
+                      <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="me-3">
+                          <div class="bg-primary icon-circle">
+                            <i class="fas fa-file-alt text-white"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <span class="small text-gray-500">December 12, 2019</span>
+                          <p>A new monthly report is ready to download!</p>
+                        </div> </a
+                      ><a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="me-3">
+                          <div class="bg-success icon-circle">
+                            <i class="fas fa-donate text-white"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <span class="small text-gray-500">December 7, 2019</span>
+                          <p>$290.29 has been deposited into your account!</p>
+                        </div> </a
+                      ><a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="me-3">
+                          <div class="bg-warning icon-circle">
+                            <i class="fas fa-exclamation-triangle text-white"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <span class="small text-gray-500">December 2, 2019</span>
+                          <p>
+                            Spending Alert: We've noticed unusually high spending for your account.
+                          </p>
+                        </div> </a
+                      ><a class="dropdown-item text-center small text-gray-500" href="#"
+                        >Show All Alerts</a
+                      >
+                    </div>
+                  </div>
+                </li>
+
+                <!-- <div class="d-none d-sm-block topbar-divider"></div> -->
+                <li class="nav-item dropdown no-arrow">
+                  <div class="nav-item dropdown no-arrow">
+                    <a
+                      class="dropdown-toggle nav-link"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                      href="#"
+                    >
+                      <!-- <span class="d-none d-lg-inline me-2 text-gray-600 small">Admin</span> -->
+                      <img
+                        class="border rounded-circle img-profile"
+                        src="assets/img/avatars/avatar1.jpeg"
+                    /></a>
+                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in">
+                      <a class="dropdown-item" href="#"
+                        ><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a
+                      ><a class="dropdown-item" href="#"
+                        ><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a
+                      ><a class="dropdown-item" href="#"
+                        ><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity
+                        log</a
+                      >
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#"
+                        ><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i
+                        >&nbsp;Logout</a
+                      >
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container-fluid recap-details" style="z-index: 2">
+            <div class="row px-4 py-2">
+              <div class="col-12">
+                <div class="recap-slider mb-3">
+                  <img src="assets/img/2.jpg" alt="" />
+                </div>
+              </div>
+              <div class="col">
+                <div class="recap-info">
+                  <span>Brand Name</span>
+                  <p>Place Name</p>
+                  <p>300 Units</p>
+                  <p>GPS Location</p>
+                  <p>April 09, 2022 1:19 PM</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="recap-btns d-flex justify-content-end">
+                  <button class="btn btn-theme m-2">Update</button>
+                  <a class="btn btn-theme m-2" href="recapBlueprint.html">
+                    <i class="bx bxs-news"></i> View BluePrint
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 recap-tabs">
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button
+                      class="nav-link active"
+                      id="nav-note-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-note"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-note"
+                      aria-selected="true"
+                    >
+                      Note
+                    </button>
+                    <button
+                      class="nav-link"
+                      id="nav-follow-up-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-follow-up"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-follow-up"
+                      aria-selected="false"
+                    >
+                      Follow-up
+                    </button>
+                    <button
+                      class="nav-link"
+                      id="nav-audio-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-audio"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-audio"
+                      aria-selected="false"
+                    >
+                      Audio
+                    </button>
+                    <button
+                      class="nav-link"
+                      id="nav-comments-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-comments"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-comments"
+                      aria-selected="false"
+                    >
+                      Comments
+                    </button>
+                    <button
+                      class="nav-link"
+                      id="nav-review-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-review"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-review"
+                      aria-selected="false"
+                    >
+                      Review
+                    </button>
+                  </div>
+                </nav>
+                <div class="tab-content mt-3" id="nav-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="nav-note"
+                    role="tabpanel"
+                    aria-labelledby="nav-note-tab"
+                  >
+                    <h3>Note About Recap</h3>
+                    <p>
+                      Cras ultrices, odio ut consectetur aliquam, libero dui commodo turpis, quis
+                      tempor augue nisl et arcu. Donec accumsan faucibus nisl, nec malesuada massa
+                      faucibus nec. Phasellus vel lobortis neque, vel tincidunt mi. Etiam vehicula
+                      sem in magna ullamcorper, sed pellentesque arcu scelerisque. Lorem ipsum dolor
+                      sit amet, consectetur adipiscing elit. Duis gravida velit odio, ut porttitor
+                      dolor pellentesque blandit. Ut porttitor sed mauris id dignissim. Duis ante
+                      sem, iaculis et ex vel, fringilla mattis nisl.Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit. Etiam in elit vel ante cursus sodales et non
+                      mauris. Nunc eleifend risus nulla, eu vehicula ligula semper vitae. Nam
+                      pharetra purus dolor. Quisque sodales, tortor ac ultricies porttitor, eros
+                      turpis accumsan orci, in commodo ipsum quam eget massa. Maecenas vulputate
+                      pretium ultricies. Nulla scelerisque mi risus, ut tempor ligula condimentum
+                      quis. Quisque efficitur magna neque, at dictum nunc tincidunt et. Quisque
+                      ultricies interdum tellus, vel convallis odio fermentum eu. Donec id mollis
+                      elit. Mauris ut auctor ipsum.
+                    </p>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="nav-follow-up"
+                    role="tabpanel"
+                    aria-labelledby="nav-follow-up-tab"
+                  >
+                    <h3>Follow up</h3>
+                    <div class="card mb-3">
+                      <div class="card-body d-flex">
+                        <img
+                          src="assets//img/avatars/avatar1.jpeg"
+                          alt=""
+                          width="50"
+                          height="50"
+                          class="rounded-pill"
+                        />
+                        <div class="user-follow-up ms-2">
+                          <div class="user-info">Name <span>10:12 AM 15 April,2022</span></div>
+                          <div class="user-msg">
+                            <span>@Raju</span> Cras ultrices, odio ut consectetur aliquam, libero
+                            dui commodo turpis, quis tempor augue nisl et arcu. Donec accumsan
+                            faucibus nisl, nec malesuada massa faucibus nec. Phasellus vel lobortis
+                            neque, vel tincidunt mi. Etiam vehicula sem in magna ullamcorper, sed
+                            pellentesque arcu scelerisque. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="card-body d-flex">
+                        <img
+                          src="assets//img/avatars/avatar1.jpeg"
+                          alt=""
+                          width="50"
+                          height="50"
+                          class="rounded-pill"
+                        />
+                        <div class="user-follow-up ms-2">
+                          <div class="user-info">Name <span>10:12 AM 15 April,2022</span></div>
+                          <div class="user-msg">
+                            <span>@Raju</span> Cras ultrices, odio ut consectetur aliquam, libero
+                            dui commodo turpis, quis tempor augue nisl et arcu. Donec accumsan
+                            faucibus nisl, nec malesuada massa faucibus nec. Phasellus vel lobortis
+                            neque, vel tincidunt mi. Etiam vehicula sem in magna ullamcorper, sed
+                            pellentesque arcu scelerisque. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="card-body d-flex">
+                        <img
+                          src="assets//img/avatars/avatar1.jpeg"
+                          alt=""
+                          width="50"
+                          height="50"
+                          class="rounded-pill"
+                        />
+                        <div class="user-follow-up ms-2">
+                          <div class="user-info">Name <span>10:12 AM 15 April,2022</span></div>
+                          <div class="user-msg">
+                            <span>@Raju</span> Cras ultrices, odio ut consectetur aliquam, libero
+                            dui commodo turpis, quis tempor augue nisl et arcu. Donec accumsan
+                            faucibus nisl, nec malesuada massa faucibus nec. Phasellus vel lobortis
+                            neque, vel tincidunt mi. Etiam vehicula sem in magna ullamcorper, sed
+                            pellentesque arcu scelerisque. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="nav-audio"
+                    role="tabpanel"
+                    aria-labelledby="nav-audio-tab"
+                  >
+                    <h3>Audio</h3>
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="recap-title">
+                          <div class="title-name">Title Name</div>
+                          <div class="title-date">
+                            <!-- <button type="button" class="btn btn-audio-1">Copy Text</button> -->
+                            <!-- <button
+                              type="button"
+                              class="btn btn-audio-2"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#audioText"
+                              aria-expanded="false"
+                              aria-controls="audioText"
+                            >
+                              Hide Text
+                            </button> -->
+                            <button
+                              type="button"
+                              class="btn btn-audio-3"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#audioText"
+                              aria-expanded="false"
+                              aria-controls="audioText"
+                            >
+                              Transcribe
+                              <img
+                                src="assets/img/icons/dg-icon.svg"
+                                alt=""
+                                width="25"
+                                height="25"
+                              />
+                            </button>
+                            <label for="" class="btn btn-audio-3">
+                              <select class="bg-none btn-outline-none">
+                                <option value="EN">EN</option>
+                                <option value="ES">ES</option>
+                              </select></label
+                            >
+                            <button type="button" class="btn btn-audio-5">Delete</button>
+                          </div>
+                        </div>
+                        <div class="audio">
+                          <div class="audio-btn">
+                            <button
+                              class="btn btn-theme-2"
+                              onclick="audioToggle('/assets/audio/test.mp3',1)"
+                            >
+                              <i class="bx bx-play"></i>
+                            </button>
+                          </div>
+                          <div class="audio-line px-1">
+                            <div
+                              id="musicGraph"
+                              class="waveData"
+                              data-audio-file="/assets/audio/test.mp3"
+                            >
+                              <wave
+                                ><img
+                                  src="assets/img/icons/demo-audio-graph.svg"
+                                  alt=""
+                                  style="width: 100%; height: 100%"
+                                />
+                              </wave>
+                              <!-- Please Leave this fild empty -->
+                            </div>
+                          </div>
+                          <div class="audio-duration">10:12</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="recap-title">
+                          <div class="title-name">Title Name</div>
+                          <div class="title-date">
+                            <button type="button" class="btn btn-audio-1">Copy Text</button>
+                            <button
+                              type="button"
+                              class="btn btn-audio-2"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#audioText"
+                              aria-expanded="false"
+                              aria-controls="audioText"
+                            >
+                              Hide Text
+                            </button>
+                            <!-- <button
+                              type="button"
+                              class="btn btn-audio-3"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#audioText"
+                              aria-expanded="false"
+                              aria-controls="audioText"
+                            >
+                              Transcribe
+                              <img
+                                src="assets/img/icons/dg-icon.svg"
+                                alt=""
+                                width="25"
+                                height="25"
+                              />
+                            </button> -->
+                            <label for="" class="btn btn-audio-3">
+                              <select class="bg-none btn-outline-none">
+                                <option value="EN">EN</option>
+                                <option value="ES">ES</option>
+                              </select></label
+                            >
+                            <button type="button" class="btn btn-audio-5">Delete</button>
+                          </div>
+                        </div>
+                        <div class="audio">
+                          <div class="audio-btn">
+                            <button
+                              class="btn btn-theme-2"
+                              onclick="audioToggle('/assets/audio/test.mp3',2)"
+                            >
+                              <i class="bx bx-play"></i>
+                            </button>
+                          </div>
+                          <div class="audio-line px-1">
+                            <div
+                              id="musicGraph2"
+                              class="waveData"
+                              data-audio-file="/assets/audio/test.mp3"
+                            >
+                              <wave
+                                ><img
+                                  src="assets/img/icons/demo-audio-graph.svg"
+                                  alt=""
+                                  style="width: 100%; height: 100%"
+                                />
+                              </wave>
+                              <!-- need modification -->
+                            </div>
+                          </div>
+                          <div class="audio-duration">10:12</div>
+                        </div>
+                        <div class="audio-des">
+                          Cras ultrices, odio ut consectetur aliquam, libero dui commodo turpis,
+                          quis tempor augue nisl et arcu. Donec accumsan faucibus nisl, nec
+                          malesuada massa faucibus nec. Phasellus vel lobortis neque, vel tincidunt
+                          mi. Etiam vehicula sem in magna ullamcorper, sed pellentesque arcu
+                          scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                          gravida velit odio, ut porttitor dolor pellentesque blandit. Ut porttitor
+                          sed mauris id dignissim. Duis ante sem, iaculis et ex vel, fringilla
+                          mattis nisl. Cras ultrices, odio ut consectetur aliquam, libero dui
+                          commodo turpis,
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="recap-title">
+                          <div class="title-name">Title Name</div>
+                          <div class="title-date">
+                            <button type="button" class="btn btn-audio-1">Copy Text</button>
+                            <button
+                              type="button"
+                              class="btn btn-audio-2"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#audioText"
+                              aria-expanded="false"
+                              aria-controls="audioText"
+                            >
+                              Hide Text
+                            </button>
+                            <!-- <button
+                              type="button"
+                              class="btn btn-audio-3"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#audioText"
+                              aria-expanded="false"
+                              aria-controls="audioText"
+                            >
+                              Transcribe
+                              <img
+                                src="assets/img/icons/dg-icon.svg"
+                                alt=""
+                                width="25"
+                                height="25"
+                              />
+                            </button> -->
+                            <label for="" class="btn btn-audio-3">
+                              <select class="bg-none btn-outline-none">
+                                <option value="EN">EN</option>
+                                <option value="ES">ES</option>
+                              </select></label
+                            >
+                            <button type="button" class="btn btn-audio-5">Delete</button>
+                          </div>
+                        </div>
+                        <div class="audio-des">
+                          Cras ultrices, odio ut consectetur aliquam, libero dui commodo turpis,
+                          quis tempor augue nisl et arcu. Donec accumsan faucibus nisl, nec
+                          malesuada massa faucibus nec. Phasellus vel lobortis neque, vel tincidunt
+                          mi. Etiam vehicula sem in magna ullamcorper, sed pellentesque arcu
+                          scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                          gravida velit odio, ut porttitor dolor pellentesque blandit. Ut porttitor
+                          sed mauris id dignissim. Duis ante sem, iaculis et ex vel, fringilla
+                          mattis nisl. Cras ultrices, odio ut consectetur aliquam, libero dui
+                          commodo turpis,
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade recap-comments"
+                    id="nav-comments"
+                    role="tabpanel"
+                    aria-labelledby="nav-comments-tab"
+                  >
+                    <h3>Comments</h3>
+                    <div class="massege-reply p-2 d-grid align-items-center" style="">
+                      <div class="d-flex justify-content-between align-items-center px-3">
+                        <button class="btn btn-outline-none">
+                          <img src="assets/img/icons/image-icon.svg" alt="" />
+                        </button>
+                        <button class="btn btn-outline-none">
+                          <img src="assets/img/icons/gif-icon.svg" alt="" />
+                        </button>
+                        <div
+                          class="bg-light rounded-pill px-3"
+                          style="background: #f2f2f5; width: 100%"
+                        >
+                          <div class="ms-auto">
+                            <div class="input-group">
+                              <form style="width: 100%">
+                                <div class="input-group">
+                                  <button
+                                    class="btn btn-outline-none"
+                                    type="button"
+                                    id="button-addon1"
+                                  >
+                                    <img src="assets/img/icons/emojy-icon.svg" alt="" />
+                                  </button>
+                                  <input
+                                    type="text"
+                                    class="form-control py-3"
+                                    placeholder="Search here..."
+                                    aria-label="Search for keyword"
+                                    aria-describedby="button-addon2"
+                                    name="s"
+                                    value=""
+                                  />
+                                  <button
+                                    class="btn btn-outline-none"
+                                    type="submit"
+                                    id="button-addon2"
+                                  >
+                                    <img src="assets/img/icons/send-icon.svg" alt="" />
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="card mb-3">
+                      <div class="card-body d-flex">
+                        <img
+                          src="assets//img/avatars/avatar1.jpeg"
+                          alt=""
+                          width="50"
+                          height="50"
+                          class="rounded-pill"
+                        />
+                        <div class="user-follow-up ms-2">
+                          <div class="user-info">Name <span>10:12 AM 15 April,2022</span></div>
+                          <div class="user-msg">
+                            <span>@Raju</span> Cras ultrices, odio ut consectetur aliquam, libero
+                            dui commodo turpis, quis tempor augue nisl et arcu. Donec accumsan
+                            faucibus nisl, nec malesuada massa faucibus nec. Phasellus vel lobortis
+                            neque, vel tincidunt mi. Etiam vehicula sem in magna ullamcorper, sed
+                            pellentesque arcu scelerisque. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="card-body d-flex">
+                        <img
+                          src="assets//img/avatars/avatar1.jpeg"
+                          alt=""
+                          width="50"
+                          height="50"
+                          class="rounded-pill"
+                        />
+                        <div class="user-follow-up ms-2">
+                          <div class="user-info">Name <span>10:12 AM 15 April,2022</span></div>
+                          <div class="user-msg">
+                            <span>@Raju</span> Cras ultrices, odio ut consectetur aliquam, libero
+                            dui commodo turpis, quis tempor augue nisl et arcu. Donec accumsan
+                            faucibus nisl, nec malesuada massa faucibus nec. Phasellus vel lobortis
+                            neque, vel tincidunt mi. Etiam vehicula sem in magna ullamcorper, sed
+                            pellentesque arcu scelerisque. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="card-body d-flex">
+                        <img
+                          src="assets//img/avatars/avatar1.jpeg"
+                          alt=""
+                          width="50"
+                          height="50"
+                          class="rounded-pill"
+                        />
+                        <div class="user-follow-up ms-2">
+                          <div class="user-info">Name <span>10:12 AM 15 April,2022</span></div>
+                          <div class="user-msg">
+                            <span>@Raju</span> Cras ultrices, odio ut consectetur aliquam, libero
+                            dui commodo turpis, quis tempor augue nisl et arcu. Donec accumsan
+                            faucibus nisl, nec malesuada massa faucibus nec. Phasellus vel lobortis
+                            neque, vel tincidunt mi. Etiam vehicula sem in magna ullamcorper, sed
+                            pellentesque arcu scelerisque. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h6>See more</h6>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="nav-review"
+                    role="tabpanel"
+                    aria-labelledby="nav-review-tab"
+                  >
+                    <h3>Review</h3>
+                    <div class="d-flex justify-content-center mb-3">
+                      <fieldset class="rating">
+                        <input type="radio" id="star5_2" name="rating_2" value="5" /><label
+                          class="full"
+                          for="star5_2"
+                          title="Awesome - 5 stars"
+                        ></label>
+                        <input
+                          type="radio"
+                          id="star4half_2"
+                          name="rating_2"
+                          value="4 and a half"
+                        /><label
+                          class="half"
+                          for="star4half_2"
+                          title="Pretty good - 4.5 stars"
+                        ></label>
+                        <input type="radio" id="star4_2" name="rating_2" value="4" /><label
+                          class="full"
+                          for="star4_2"
+                          title="Pretty good - 4 stars"
+                        ></label>
+                        <input
+                          type="radio"
+                          id="star3half_2"
+                          name="rating_2"
+                          value="3 and a half"
+                        /><label class="half" for="star3half_2" title="Meh - 3.5 stars"></label>
+                        <input type="radio" id="star3_2" name="rating_2" value="3" /><label
+                          class="full"
+                          for="star3_2"
+                          title="Meh - 3 stars"
+                        ></label>
+                        <input
+                          type="radio"
+                          id="star2half_2"
+                          name="rating_2"
+                          value="2 and a half"
+                        /><label
+                          class="half"
+                          for="star2half_2"
+                          title="Kinda bad - 2.5 stars"
+                        ></label>
+                        <input type="radio" id="star2_2" name="rating_2" value="2" /><label
+                          class="full"
+                          for="star2_2"
+                          title="Kinda bad - 2 stars"
+                        ></label>
+                        <input
+                          type="radio"
+                          id="star1half_2"
+                          name="rating_2"
+                          value="1 and a half"
+                        /><label class="half" for="star1half_2" title="Meh - 1.5 stars"></label>
+                        <input type="radio" id="star1_2" name="rating_2" value="1" /><label
+                          class="full"
+                          for="star1_2"
+                          title="Sucks big time - 1 star"
+                        ></label>
+                        <input type="radio" id="starhalf_2" name="rating_2" value="half" /><label
+                          class="half"
+                          for="starhalf_2"
+                          title="Sucks big time - 0.5 stars"
+                        ></label>
+                      </fieldset>
+                    </div>
+                    <textarea
+                      class="form-control custom-input"
+                      id="note"
+                      cols="60"
+                      rows="6"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="bg-light sticky-footer">
+          <div class="container my-auto">
+            <div class="text-center my-auto copyright"><span>Copyright © RECAP 2022</span></div>
+          </div>
+        </footer>
+      </div>
+
+      <!-- <a class="border rounded d-inline scroll-to-top" href="#page-top"
+        ><i class="fas fa-angle-up"></i
+      ></a> -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/dragscroll.js"></script>
+  </body>
+</html>

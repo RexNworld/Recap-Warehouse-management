@@ -694,7 +694,9 @@ section:nth-child(odd) {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   text-decoration: none;
-  padding: 10px;
+  /* padding: 10px; */
+  margin-right: 0 !important;
+  margin-left: 0 !important;
   border-radius: 8px;
 }
 #footer .credits a:hover {

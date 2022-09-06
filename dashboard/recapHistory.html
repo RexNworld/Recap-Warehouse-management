@@ -15,6 +15,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <link href="assets/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <!-- <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script> -->
   </head>
 
   <body id="page-top">
@@ -98,6 +99,20 @@
               >
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img src="assets/img/icons/whatsapp.svg" class="me-2" /><span
+                  >Connect to WhatsApp</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img src="assets/img/icons/slack.svg" class="me-2" /><span
+                  >Connect to Slack</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="Logout.html"
                 ><i class="bx bxs-log-out"></i><span>Log out</span></a
               >
@@ -118,7 +133,7 @@
               >
                 <i class="fas fa-bars"></i>
               </button>
-              <h4 class="text-dark fw-bold m-0">Dashboard</h4>
+              <h4 class="text-dark fw-bold m-0">Recap Round Up</h4>
               <ul class="navbar-nav flex-nowrap ms-auto" style="width: auto">
                 <li class="nav-item dropdown no-arrow">
                   <a
@@ -262,20 +277,183 @@
                 </button>
                 <div class="btn-group">
                   <button
+                    class="btn btn-dropdown-theme btn-outline-none"
                     type="button"
-                    class="btn btn-dropdown-theme dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#flter"
+                    aria-controls="flter"
                   >
                     <img src="assets/img/icons/filter.svg" alt="" />
                   </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
-                  </ul>
+                  <!-- s------------------------------------------------------------------------------------ -->
+                  <div
+                    class="offcanvas offcanvas-end custom-offcanvas rounded"
+                    tabindex="-1"
+                    id="flter"
+                    aria-labelledby="flterLabel"
+                  >
+                    <div class="offcanvas-header py-2 pt-3">
+                      <h5 id="flterLabel"></h5>
+                      <button
+                        type="button"
+                        class="btn-close text-reset btn-outline-none"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body pt-0">
+                      <form action="">
+                        <div class="filter-header">Company Type</div>
+                        <div class="filter-labels">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="company_type"
+                              value="Warehouse Management"
+                              id="Warehouse"
+                            />
+                            <label class="form-check-label" for="Warehouse">
+                              Warehouse Management
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="company_type"
+                              value="Food & Beverage"
+                              id="Food"
+                            />
+                            <label class="form-check-label" for="Food"> Food & Beverage </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="company_type"
+                              value="Real Estate"
+                              id="RealEstate"
+                            />
+                            <label class="form-check-label" for="RealEstate"> Real Estate </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="company_type"
+                              value="Retail"
+                              id="retail"
+                            />
+                            <label class="form-check-label" for="retail"> Retail </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="company_type"
+                              value="Other"
+                              id="Other"
+                            />
+                            <label class="form-check-label" for="Other"> Other </label>
+                          </div>
+                        </div>
+                        <!-- Filter By ...  -->
+                        <div class="filter-header">Filter By</div>
+                        <div class="filter-labels">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="filter_by"
+                              value="Lowest"
+                              id="Lowest"
+                            />
+                            <label class="form-check-label" for="Lowest"> Lowest </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="filter_by"
+                              value="Highest"
+                              id="Highest"
+                            />
+                            <label class="form-check-label" for="Highest"> Highest </label>
+                          </div>
+                        </div>
+                        <!--  -->
+                        <div class="filter-header">Store Type</div>
+                        <div class="filter-labels">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="store_type"
+                              value="C-Store"
+                              id="C-Store"
+                            />
+                            <label class="form-check-label" for="C-Store"> C-Store </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="store_type"
+                              value="Grocery"
+                              id="Grocery"
+                            />
+                            <label class="form-check-label" for="Grocery"> Grocery </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="store_type"
+                              value="Mass Merch"
+                              id="Merch"
+                            />
+                            <label class="form-check-label" for="Merch"> Mass Merch </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="store_type"
+                              value="Drug & Dollar"
+                              id="Drug"
+                            />
+                            <label class="form-check-label" for="Drug"> Drug & Dollar </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="store_type"
+                              value="Package Liquor"
+                              id="Package"
+                            />
+                            <label class="form-check-label" for="Package"> Package Liquor </label>
+                          </div>
+                        </div>
+                        <div class="filter-header">Sort by (rating)</div>
+                        <div class="rate">
+                          <input type="checkbox" id="star5" name="rate" value="5" />
+                          <label for="star5" title="5 stars">5 stars</label>
+                          <input type="checkbox" id="star4" name="rate" value="4" />
+                          <label for="star4" title="4 stars">4 stars</label>
+                          <input type="checkbox" id="star3" name="rate" value="3" />
+                          <label for="star3" title="3 stars">3 stars</label>
+                          <input type="checkbox" id="star2" name="rate" value="2" />
+                          <label for="star2" title="2 stars">2 stars</label>
+                          <input type="checkbox" id="star1" name="rate" value="1" />
+                          <label for="star1" title="1 star">1 star</label>
+                        </div>
+                        <button class="btn btn-theme w-100 py-2">Search Now</button>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- -------------------------------- END offcanvas --------------------------- -->
                 </div>
               </div>
             </div>
@@ -319,7 +497,7 @@
                         </td>
                         <td>@Raju</td>
                         <td>View</td>
-                        <td>View</td>
+                        <td><a href="recapMap.html">View</a></td>
                         <td>
                           <a href="#" class="btn btn-theme-2"><i class="bx bx-link"></i></a>
                         </td>
@@ -350,7 +528,7 @@
                         </td>
                         <td>@Raju</td>
                         <td>View</td>
-                        <td>View</td>
+                        <td><a href="recapMap.html">View</a></td>
                         <td>
                           <a href="#" class="btn btn-theme-2"><i class="bx bx-link"></i></a>
                         </td>
@@ -381,7 +559,7 @@
                         </td>
                         <td>@Raju</td>
                         <td>View</td>
-                        <td>View</td>
+                        <td><a href="recapMap.html">View</a></td>
                         <td>
                           <a href="#" class="btn btn-theme-2"><i class="bx bx-link"></i></a>
                         </td>
@@ -412,7 +590,7 @@
                         </td>
                         <td>@Raju</td>
                         <td>View</td>
-                        <td>View</td>
+                        <td><a href="recapMap.html">View</a></td>
                         <td>
                           <a href="#" class="btn btn-theme-2"><i class="bx bx-link"></i></a>
                         </td>
@@ -443,7 +621,7 @@
                         </td>
                         <td>@Raju</td>
                         <td>View</td>
-                        <td>View</td>
+                        <td><a href="recapMap.html">View</a></td>
                         <td>
                           <a href="#" class="btn btn-theme-2"><i class="bx bx-link"></i></a>
                         </td>
@@ -457,12 +635,16 @@
                   </table>
                 </div>
               </div>
+              <div class="d-flex justify-content-end mt-3">
+                <a href="#" class="btn btn-primary m-1 px-5 py-3 bg-theme">Share</a
+                ><a href="#" class="btn btn-primary m-1 px-5 py-3 bg-theme">Export</a>
+              </div>
             </div>
           </div>
         </div>
         <footer class="bg-light sticky-footer">
           <div class="container my-auto">
-            <div class="text-center my-auto copyright"><span>Copyright © NOIMACKI 2022</span></div>
+            <div class="text-center my-auto copyright"><span>Copyright © RECAP 2022</span></div>
           </div>
         </footer>
       </div>
@@ -471,9 +653,7 @@
       ></a>
     </div>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
     <script src="assets/js/script.min.js"></script>
